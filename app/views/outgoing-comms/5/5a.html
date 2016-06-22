@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %}
+    
+    
+ <div class="agovuk-box-highlight" style="background: #006435;">
+        <h1 class="bold-small" style="padding: 10px 20px; color: #fff;">Email sent to Wayne Thornton</h1>
+<!--
+        <p>
+            Grant for a Tier 4 (General) student visa has been sent to Wayne Thornton
+        </p>
+-->
+
+    </div>
+    {% include "includes/outgoing-header.html" %}
+
+
+
+   
+
+ <h2 class="heading-medium" style="margin-top: 20px;">Find an applicant</h2>
+    <form action="/outgoing-comms/5/check-input" method="get" class="form">
+        <fieldset>
+            <div class="form-group">
+                <label class="form-label-bold" for="cid">
+                    Unique applicant number (UAN)
+                    <span class="form-hint">For example 1212-2222-3333-4444</span>
+                </label>
+                <input class="form-control form-control-1-4" id="cid" name="pnn" type="text" autocomplete="off">
+            </div>
+
+        </fieldset>
+        <div class="form-group">
+            <input type="submit" class="button continue-button" value="Find">
+        </div>
+
+    </form>
+
+
+</main>
+{% endblock %}

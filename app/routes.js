@@ -296,7 +296,7 @@ router.get('/outgoing-comms/5/check-input', function (req, res) {
 
  } else {
    // redirect to the relevant page
-   res.redirect("/outgoing-comms/5/check-results");
+   res.redirect("/outgoing-comms/5/check-results-rot1-all");
 
  }
 
