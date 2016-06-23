@@ -303,6 +303,37 @@ router.get('/outgoing-comms/5/check-input', function (req, res) {
 });
 
 
+router.get('/outgoing-comms/5/check-input4', function (req, res) {
+
+ // get the answer from the query string (eg. ?pnn=a)
+ var pnn = req.query.pnn;
+
+ // the pnn we're trying to match to continue
+ var matchString = ["b","1212-0000-0000-1268","1212000000001268"];
+
+ var loginMatched = false;
+
+ for (var i=0; i < matchString.length; i++)
+ {
+   if (pnn === matchString[i])
+   {
+     loginMatched = true;
+   }
+ }
+
+ if (!loginMatched){
+   // redirect to the relevant page
+   res.redirect("/outgoing-comms/5/index-errors");
+
+ } else {
+   // redirect to the relevant page
+   res.redirect("/outgoing-comms/5/check-results-rot4-all");
+
+ }
+
+});
+
+
 
 router.get('/outgoing-comms/5/3/', function (req, res) {
 
