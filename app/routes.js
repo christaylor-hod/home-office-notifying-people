@@ -296,7 +296,7 @@ router.get('/outgoing-comms/5/check-input', function (req, res) {
 
  } else {
    // redirect to the relevant page
-   res.redirect("/outgoing-comms/5/check-results-rot1-all");
+   res.redirect("/outgoing-comms/5/check-results-dependants4");
 
  }
 
@@ -309,7 +309,7 @@ router.get('/outgoing-comms/5/check-input4', function (req, res) {
  var pnn = req.query.pnn;
 
  // the pnn we're trying to match to continue
- var matchString = ["b","1212-0000-0000-1268","1212000000001268"];
+ var matchString = ["b","1212-0000-0000-1268","1212000000001268","a","1212-0000-0000-1267","1212000000001267"];
 
  var loginMatched = false;
 
