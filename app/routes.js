@@ -272,7 +272,8 @@ router.get('/outgoing-comms/4/', function (req, res) {
 
 // -------------------------------------------------------------- V5
 
-router.get('/outgoing-comms/5/check-input', function (req, res) {
+// ----------------------- applicant with dependants
+router.get('/outgoing-comms/5/check-input1', function (req, res) {
 
  // get the answer from the query string (eg. ?pnn=a)
  var pnn = req.query.pnn;
@@ -296,14 +297,14 @@ router.get('/outgoing-comms/5/check-input', function (req, res) {
 
  } else {
    // redirect to the relevant page
-   res.redirect("/outgoing-comms/5/check-results-dependants4");
+   res.redirect("/outgoing-comms/5/check-results-rot1-all");
 
  }
 
 });
 
-
-router.get('/outgoing-comms/5/check-input4', function (req, res) {
+// ----------------------- single applicant
+router.get('/outgoing-comms/5/check-input', function (req, res) {
 
  // get the answer from the query string (eg. ?pnn=a)
  var pnn = req.query.pnn;

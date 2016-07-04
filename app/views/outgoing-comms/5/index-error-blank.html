@@ -7,12 +7,11 @@
     <h2 class="heading-medium" style="margin-top: 20px;">Find an applicant</h2>
     <form action="/outgoing-comms/5/check-input" method="get" class="form">
         <fieldset>
-            <div class="form-group">
+            <div class="form-group error">
                 <label class="form-label-bold" for="cid">
                     Unique application number (UAN)
-                    <span class="form-hint">For example 1212-2222-3333-4444</span>
-                </label>
-                <input class="form-control form-control-1-4" id="cid" name="pnn" type="text" autocomplete="off">
+                    <span class="error-message">No UAN entered</span>                </label>
+                <input class="form-control form-control-1-4" id="cid" name="pnn" type="text" autocomplete="off" placeholder="UAN or CID case ID">
             </div>
 
         </fieldset>
@@ -21,6 +20,9 @@
         </div>
 
     </form>
+
+
+
 
 
 </main>
