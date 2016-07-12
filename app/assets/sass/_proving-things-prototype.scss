@@ -195,3 +195,14 @@
         text-decoration: none;
     }
 }
+
+table {
+    input[type=text],
+    textarea.form-control {
+        width: 100%; 
+        font-size: 16px;
+    }
+    label.form-label-bold {
+        font-size: 16px;
+    }
+}

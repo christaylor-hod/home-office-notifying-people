@@ -1,0 +1,164 @@
+{% extends "layout.html" %} {% block page_title %} Home Office - Visa and Immigration {% endblock %} {% block content %}
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %} {% include "includes/outgoing-header.html" %}
+
+
+
+    <form action="/outgoing-comms/5/3-approval-nodependants-withpolice" method="get" class="form">
+
+        <table>
+            <tbody>
+                <tr>
+                    <th colspan="2">
+                        <h2 class="heading-medium" style="margin: 0px 0 0 0;">Applicant details</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Unique applicant number</th>
+                    <td>1212-0000-0000-1267</td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td>Wayne Thornton</td>
+                </tr>
+                <tr>
+                    <th>Passport number</th>
+                    <td>L898902C</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>Decision (GCS7)</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>wayne.thornton@address.com</td>
+                </tr>
+                <tr>
+                    <th>Register with police?</th>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <h2 class="heading-medium" style="margin: 20px 0 0 0;">Course details</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Course:</th>
+                    <td>Electronic Engineering</td>
+                </tr>
+
+                <tr>
+                    <th>Course level:</th>
+                    <td>Master of Engineering</td>
+                </tr>
+                <tr>
+                    <th>Sponsor:</th>
+                    <td>Manchester University</td>
+                </tr>
+                <tr>
+                    <th>Main study address:</th>
+                    <td>Faculty of Engineering, Electronic House, M2 4TG</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <th colspan="6">
+                        <h2 class="heading-medium" style="margin: 20px 0 0 0;">Dependant  details</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Unique applicant number</th>
+                    <th>Name</th>
+                    <th>Passport no.</th>
+                    <th>Status</th>
+                    <th>Police reg?</th>
+                    <th>Preview</th>
+                </tr>
+                <tr>
+                    <td>1212-0000-0000-1267/1</td>
+                    <td>Jane Thornton</td>
+                    <td>L896638C</td>
+                    <td>Decision (GCS7)</td>
+                    <td>Yes</td>
+                    <td>
+                        <details><summary>
+                            <span class="summary">Email</span>
+                        </summary></details>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1212-0000-0000-1267/2</td>
+                    <td>Allie Thornton</td>
+                    <td>L896638C</td>
+                    <td>Decision (GCS7)</td>
+                    <td>Yes</td>
+                    <td>
+                        <details><summary>
+                            <span class="summary">Email</span>
+                        </summary></details>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1212-0000-0000-1267/3</td>
+                    <td>Billie-Bob Thornton</td>
+                    <td>L896638C</td>
+                    <td>Decision (GCS7)</td>
+                    <td>No</td>
+                    <td>
+                        <details><summary>
+                            <span class="summary">Email</span>
+                        </summary></details>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1212-0000-0000-1267/4</td>
+                    <td>Jane Thornton Jr</td>
+                    <td>L896638C</td>
+                    <td>Decision (GCS7)</td>
+                    <td>No</td>
+                    <td>
+                        <details><summary>
+                            <span class="summary">Email</span>
+                        </summary></details>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <fieldset class="inline" style="margin: 20px 0 0 0;">
+
+            <h2 class="heading-small">Are these details correct?</h2>
+
+            <label class="block-label" data-target="right" for="radio-sponsor-ok">
+                <input id="radio-sponsor-ok" type="radio" name="radioSponsor" value="yes"> Yes
+            </label>
+            <label class="block-label" data-target="wrong" for="radio-sponsor-edit">
+                <input id="radio-sponsor-edit" type="radio" name="radioSponsor" value="no"> No
+            </label>
+
+        </fieldset>
+
+        <div class="js-hidden" id="wrong">
+            <fieldset class="inline">
+                <div class="panel panel-border-narrow">
+                    <p><strong>Correct any errors in CID</strong></p>
+
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="js-hidden" id="right">
+
+            <div class="form-group">
+                <input type="submit" class="button continue-button" value="Generate grant notification">
+            </div>
+        </div>
+        <a href="/outgoing-comms/5/index" style="margin-top: 20px; display: inline-block">Search again</a>
+
+    </form>
+
+</main>
+{% endblock %}
